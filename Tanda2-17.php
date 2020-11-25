@@ -36,6 +36,5 @@
           echo "La primera cifra del número introducido es ", floor($primera);
         ?>
         <br><br>
-        <a href="17-01.php">>> Volver</a>
   </body>
 </html>

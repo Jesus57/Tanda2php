@@ -6,7 +6,7 @@
   </head>
   <body>
         Por favor, introduzca un número entero (como máximo de 5 cifras):
-        <form action="17-02.php" method="post">
+        <form action="Tanda2-17.php" method="post">
           <input type="number" min="-99999" max="99999" name="n" autofocus><br>
           <input type="submit" value="Aceptar">
         </form>
