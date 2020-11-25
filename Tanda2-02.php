@@ -6,31 +6,24 @@
   </head>
   <body>
         <?php
-            switch($_POST['dia'])
+            $hora = $_POST['hora'];
+            switch($hora)
             {
-                case 'lunes':
-                    echo 'Ese día tenemos Cliente';
+                case ($hora>=6 && $hora<12):
+                    echo 'Buenos días señor presidente';
                 break;
-                case 'martes':
-                    echo 'Ese día tenemos Empresa';
+                case ($hora>=12 && $hora<20):
+                    echo 'Buenas tardes señor presidente';
                 break;
-                case 'miercoles':
-                    echo 'Ese día tenemos Servidor';
+                case ($hora>=20 && $hora<=24):
+                    echo 'Buenas noches señor presidente';
                 break;
-                case 'jueves':
-                    echo 'Ese día tenemos Despliegue';
-                break;
-                case 'viernes':
-                    echo 'Ese día tenemos Interfaces';
-                break;
-                case 'sabado':
-                    echo 'Ese día tenemos dormir';
-                break;
-                case 'domingo':
-                    echo 'Ese día no tenemos telecole';
+                case ($hora>0 && $hora<6):
+                    echo 'Buenas noches señor presidente';
                 break;
                 default:
-                    echo 'Pon bien el día';
+                    echo 'No esta bien ponido';
+                break;
             }
         ?>
 </html>
