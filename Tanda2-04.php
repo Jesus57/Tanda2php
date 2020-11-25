@@ -6,31 +6,19 @@
   </head>
   <body>
         <?php
-            switch($_POST['n'])
-            {
-                case '1':
-                    echo 'Ese día es Lunes';
-                break;
-                case '2':
-                    echo 'Ese día es Martes';
-                break;
-                case '3':
-                    echo 'Ese día es Miercoles';
-                break;
-                case '4':
-                    echo 'Ese día es Jueves';
-                break;
-                case '5':
-                    echo 'Ese día es Viernes';
-                break;
-                case '6':
-                    echo 'Ese día es Sabado';
-                break;
-                case '7':
-                    echo 'Ese día es Domingo';
-                break;
-                default:
-                    echo 'Pon bien el numbero';
-            }
+        $dinero = 0;
+        $horas = $_POST['horasTrabajadas'];
+
+        if ($horas>=40)
+        {
+          $dinero = $dinero + 1680;
+          $dinero = $dinero + (($horas-40)*16);
+        }
+        else
+        {
+          $dinero = $dinero + ($horas*12);
+        }
+        
+        echo "El sueldo semanal, con ". $horas. " horas trabajadas son: ". $dinero;
         ?>
 </html>
